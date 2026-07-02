@@ -19,3 +19,6 @@ The landing page is built using:
 
 1. index.html 
 2. pagespeed.png 
+
+
+PageSpeed mobile score screenshot has been added in the repository.
