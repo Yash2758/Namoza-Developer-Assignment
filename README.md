@@ -1,24 +1,26 @@
-# OrthoNow Landing Page
+# Namoza Developer Assignment
 
-This project was created as part of the Namoza Developer Assignment.
+This repository contains my submission for the Namoza Developer Assignment for the Developers (Webflow, WordPress, React & Martech) profile.
 
-The landing page is built using:
+## Files Included
 
-1. HTML
-2. CSS
-3. JavaScript
+* `index.html` → OrthoNow consultation landing page
+* `task1.md` → GTM event schema and booking funnel tracking
+* `task3.md` → Integration design and CRM workflow
+* `pagespeed.png` → Mobile PageSpeed Insights screenshot
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* GTM dataLayer Events
+* GA4 Tracking Concepts
 
 ## Features
 
-1. Responsive design
-2. Consultation booking form
-3. GTM dataLayer push on form submit
-4. Thank you message without page reload
-
-## Files
-
-1. index.html 
-2. pagespeed.png 
-
-
-PageSpeed mobile score screenshot has been added in the repository.
+* Responsive landing page
+* Consultation booking form
+* GTM dataLayer push on form submit
+* Thank you state without page reload
+* Mobile optimized design
