@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OrthoNow - Book Consultation</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      color:white;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:
+        linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
+        url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      z-index:-1;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:20px;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .hero-content{
+      display:grid;
+      grid-template-columns:1fr 450px;
+      gap:60px;
+      align-items:center;
+      width:100%;
+    }
+
+    .left-section h1{
+      font-size:3.2rem;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+
+    .left-section p{
+      font-size:1.1rem;
+      color:#e2e8f0;
+      margin-bottom:30px;
+      max-width:600px;
+    }
+
+    .trust-box{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .trust-item{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(8px);
+      padding:14px 18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.15);
+      font-size:14px;
+      font-weight:bold;
+    }
+
+    .form-card{
+      background:white;
+      color:#1e293b;
+      padding:35px;
+      border-radius:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .form-card h2{
+      margin-bottom:20px;
+      color:#0f172a;
+      font-size:1.8rem;
+    }
+
+    .input-group{
+      margin-bottom:18px;
+    }
+
+    input{
+      width:100%;
+      padding:15px;
+      border:1px solid #cbd5e1;
+      border-radius:10px;
+      font-size:16px;
+      outline:none;
+    }
+
+    input:focus{
+      border-color:#2563eb;
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      background:#2563eb;
+      color:white;
+      border:none;
+      border-radius:10px;
+      font-size:17px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    .small-text{
+      margin-top:12px;
+      text-align:center;
+      font-size:13px;
+      color:#64748b;
+    }
+
+    .thank-you{
+      display:none;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    .thank-you h2{
+      color:#16a34a;
+      margin-bottom:15px;
+      font-size:2rem;
+    }
+
+    .thank-you p{
+      color:#ffffff;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        min-height:auto;
+        padding:30px 15px;
+      }
+
+      .hero-content{
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+
+      .left-section h1{
+        font-size:2.3rem;
+      }
+
+      .left-section p{
+        font-size:1rem;
+      }
+
+      .trust-item{
+        width:100%;
+        text-align:center;
+      }
+
+      .form-card{
+        padding:25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="left-section">
+
+          <h1>
+            Expert Orthopaedic Consultation for Knee & Back Pain
+          </h1>
+
+          <p>
+            Get an expert opinion from experienced orthopaedic specialists across 9 OrthoNow clinics in Bengaluru, Hyderabad, and Chennai.
+          </p>
+
+          <div class="trust-box">
+
+            <div class="trust-item">
+              50,000+ Patients Treated
+            </div>
+
+            <div class="trust-item">
+              9 Clinics Across South India
+            </div>
+
+            <div class="trust-item">
+              4.8★ Patient Satisfaction
+            </div>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <div class="form-card" id="formCard">
+
+            <h2>Book Your Consultation</h2>
+
+            <form id="consultationForm">
+
+              <div class="input-group">
+
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter Your Name"
+                  required
+                />
+
+              </div>
+
+              <div class="input-group">
+
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter Your Phone Number"
+                  required
+                />
+
+              </div>
+
+              <button type="submit">
+                Book Appointment
+              </button>
+
+              <p class="small-text">
+                Our care team will contact you within 15 minutes.
+              </p>
+
+            </form>
+
+          </div>
+
+          <div class="thank-you" id="thankYou">
+
+            <h2>Thank You!</h2>
+
+            <p>
+              Your consultation request has been received. Our team will contact you shortly.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    const form = document.getElementById("consultationForm");
+
+    form.addEventListener("submit", function(event){
+
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+
+      window.dataLayer.push({
+        event: "consultation_form_submitted",
+        patient_name: name,
+        patient_phone: phone,
+        source: "Google Ads Consultation Landing Page"
+      });
+
+      console.log(window.dataLayer);
+
+      document.getElementById("formCard").style.display = "none";
+
+      document.getElementById("thankYou").style.display = "block";
+
+    });
+
+  </script>
+
+</body>
+</html>
